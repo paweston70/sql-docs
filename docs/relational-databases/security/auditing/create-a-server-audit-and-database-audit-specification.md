@@ -26,7 +26,7 @@ Auditing an instance of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md
 
 Database audit specifications are non-securable objects that reside in a given database. When a database audit specification is created, it's in a disabled state.
 
-When you're creating or modifying a database audit specification in a user database, don't include audit actions on server-scope objects, like the system views. If you include server-scoped objects, the audit is created. But the server-scoped objects aren't included, and no error is returned. To audit server-scoped objects, use a database audit specification in the `master` database.
+When creating or modifying a database audit specification in a user database, do not include audit actions on server-scoped objects, such as system views; the audit will be created but the server-scoped objects will not and no error will be returned. To audit server-scoped objects, create a database audit specification in the `master` database.
 
 Database audit specifications reside in the database where they're created, except for the `tempdb` system database.
 
